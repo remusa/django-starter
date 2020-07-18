@@ -1,9 +1,11 @@
 from django.urls import path
 
-from .views import index
+from . import views
 
 app_name = "frontend"
 
 urlpatterns = [
-    path("", index, name="app"),
+    path("", views.index, name="app"),
+    path("csrf/", views.csrf),
+    path("ping/", views.ping),
 ]

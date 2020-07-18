@@ -247,6 +247,10 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST")
 
 
+# CSRF
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")
+
+
 # Email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # console/smtp
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
