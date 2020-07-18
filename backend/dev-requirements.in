@@ -1,0 +1,5 @@
+# dev-requirements.in
+-c requirements.txt
+
+django-debug-toolbar==2.2
+pip-tools==5.2.1
