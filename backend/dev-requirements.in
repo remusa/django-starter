@@ -1,5 +1,7 @@
 # dev-requirements.in
 -c requirements.txt
 
+black==19.10b0
 django-debug-toolbar==2.2
+django-environ-plus==0.0.3
 pip-tools==5.2.1

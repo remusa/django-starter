@@ -4,14 +4,22 @@
 #
 #    pip-compile dev-requirements.in
 #
+appdirs==1.4.4            # via black
 asgiref==3.2.10           # via -c requirements.txt, django
-click==7.1.2              # via pip-tools
+attrs==19.3.0             # via black
+black==19.10b0            # via -r dev-requirements.in
+click==7.1.2              # via black, pip-tools
 django-debug-toolbar==2.2  # via -r dev-requirements.in
-django==3.0.8             # via -c requirements.txt, django-debug-toolbar
+django-environ-plus==0.0.3  # via -r dev-requirements.in
+django==3.0.8             # via -c requirements.txt, django-debug-toolbar, django-environ-plus
+pathspec==0.8.0           # via black
 pip-tools==5.2.1          # via -r dev-requirements.in
 pytz==2020.1              # via -c requirements.txt, django
-six==1.15.0               # via pip-tools
+regex==2020.7.14          # via black
+six==1.15.0               # via django-environ-plus, pip-tools
 sqlparse==0.3.1           # via -c requirements.txt, django, django-debug-toolbar
+toml==0.10.1              # via black
+typed-ast==1.4.1          # via black
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
