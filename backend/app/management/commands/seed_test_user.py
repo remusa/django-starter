@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
 from django.db import connections
 from django.db.utils import OperationalError
+
 from django_seed import Seed
 
 CustomUser = get_user_model()
@@ -17,7 +18,16 @@ class Command(BaseCommand):
 
         seeder = Seed.seeder()
 
-        seeder.add_entity(CustomUser, 1, {"email": "test1@test.com", "password": "test123456", "is_staff": False, "is_superuser": False,})
+        seeder.add_entity(
+            CustomUser,
+            1,
+            {
+                "email": "test1@test.com",
+                "password": "test123456",
+                "is_staff": False,
+                "is_superuser": False,
+            },
+        )
 
         inserted_pks = seeder.execute()
 

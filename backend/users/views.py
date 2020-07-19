@@ -13,6 +13,8 @@ from django.utils import translation
 from django.utils.html import escape
 from django.utils.translation import LANGUAGE_SESSION_KEY
 from django.views import generic
+
+from links.models import Link
 from rest_framework import generics, status, viewsets
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -21,8 +23,6 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAdminUser, IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.request import Request
 from rest_framework.response import Response
-
-from links.models import Link
 
 from .forms import CustomUserChangeForm, CustomUserCreationForm
 from .permissions import IsUserOrAdmin

@@ -4,8 +4,8 @@ from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
 from django.db import connections
 from django.db.utils import OperationalError
-from django_seed import Seed
 
+from django_seed import Seed
 from links.models import Link
 
 CustomUser = get_user_model()

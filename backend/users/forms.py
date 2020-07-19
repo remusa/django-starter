@@ -1,6 +1,7 @@
-from allauth.socialaccount.forms import SignupForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+
+from allauth.socialaccount.forms import SignupForm
 
 CustomUser = get_user_model()
 

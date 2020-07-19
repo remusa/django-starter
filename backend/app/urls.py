@@ -33,7 +33,7 @@ urlpatterns = [
     path("rest-auth/", include("dj_rest_auth.urls")),
     path("rest-auth/registration/", include("dj_rest_auth.registration.urls")),
     # Apps
-    path('', include('frontend.urls')),
+    path("", include("frontend.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
