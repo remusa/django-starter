@@ -27,6 +27,7 @@ env = environ.Env(
     CORS_ORIGIN_WHITELIST=(list, ["http://localhost:3000",]),
 )
 # reading .env file
+# env_path = Path("./") / ".env"
 environ.Env.read_env()
 
 SITE_ROOT = root()
@@ -191,7 +192,7 @@ ACCOUNT_LOGOUT_REDIRECT = "/"
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
 # Social account
-SOCIALACCOUNT_QUERY_EMAIL = True  # Default value is ACCOUNT_EMAIL_REQUIRED
+SOCIALACCOUNT_QUERY_EMAIL = True
 # Email verification
 ACCOUNT_EMAIL_VERIFICATION = "optional"
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
@@ -253,7 +254,7 @@ CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")
 
 # Email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # console/smtp
-# EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 DEFAULT_FROM_EMAIL = "admin@localhost"
 
 
