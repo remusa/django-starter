@@ -1,0 +1,23 @@
+GET http://localhost:8000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:8000/rest-auth/registration/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "test@test.com",
+	"password1": "test123456",
+	"password2": "test123456"
+}
+
+###
+
+POST http://localhost:8000/rest-auth/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"email": "test@test.com",
+	"password": "test123456"
+}

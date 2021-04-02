@@ -1,5 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App'
+import App from './components/App.svelte';
 
-ReactDOM.render(<App />, document.querySelector('#app'))
+const app = new App({
+  target: document.body,
+  props: {
+    name: 'world',
+  },
+});
+
+export default app;
