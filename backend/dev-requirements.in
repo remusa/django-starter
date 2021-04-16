@@ -2,6 +2,6 @@
 -c requirements.txt
 
 black==19.10b0
-django-debug-toolbar==2.2
+django-debug-toolbar==2.2.1
 django-seed==0.2.2
 pip-tools==5.2.1
